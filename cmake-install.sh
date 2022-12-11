@@ -9,7 +9,7 @@ cd build
 ../Configure
 make
 
-sudo checkinstall --pkgname=libssl-dev .
+sudo  make install --pkgname=libssl-dev .
 
 cd ../..
 rm -rf openssl
@@ -22,8 +22,15 @@ cd build
 cmake ..
 make
 
-sudo checkinstall --pkgname=cmake .
+sudo  make install --pkgname=cmake .
 
 cd ../..
 rm -rf CMake
 
+
+#git clone https://github.com/CrowCpp/Crow.git
+#cd Crow/
+#mkdir build
+#cd build/
+#cmake .. -DCROW_BUILD_EXAMPLES=OFF -DCROW_BUILD_TESTS=OFF
+#make install
