@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.15)
-project(server)
+project(KusManager VERSION 1.2)
 
 add_executable(${PROJECT_NAME} source/main.cpp)
 
@@ -15,4 +15,4 @@ endif()
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin)
 set_target_properties(${PROJECT_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin/$<0:>)
 set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME ${PROJECT_NAME})
-set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX _V${CMAKE_PROJECT_VERSION}_${Configuration}.exe)
+set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX.exe)
