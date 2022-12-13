@@ -219,7 +219,7 @@ int main()
     app.loglevel(crow::LogLevel::Debug);
     //crow::logger::setHandler(std::make_shared<ExampleLogHandler>());
 
-    app.port(18080)
+    app.port(80)
       .multithreaded()
       .run();
 }
