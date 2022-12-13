@@ -2,5 +2,9 @@ cd server
 pwd
 git stash
 git pull
+
 cd devops
 ./build.sh
+
+cd ../bin
+./server.exe
