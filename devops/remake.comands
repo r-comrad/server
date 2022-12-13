@@ -8,4 +8,4 @@ chmod +x ./build.sh
 ./build.sh
 
 cd ../bin
-./server.exe
+sudo -S ./server.exe 111
