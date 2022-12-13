@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.15)
 project(server)
 
-add_executable(${PROJECT_NAME} main.cpp)
+add_executable(${PROJECT_NAME} source/main.cpp)
 
 if (MSVC_VERSION GREATER_EQUAL "1900")
 target_include_directories(${PROJECT_NAME} PUBLIC D:/lib/vcpkg/installed/x64-windows/include)
