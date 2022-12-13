@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.15)
+project(crow_examples)
+
+add_executable(${PROJECT_NAME} main.cpp)
+
+if (MSVC_VERSION GREATER_EQUAL "1900")
+target_include_directories(${PROJECT_NAME} PUBLIC D:/lib/vcpkg/installed/x64-windows/include)
+target_link_libraries(${PROJECT_NAME} PUBLIC D:/lib/vcpkg/installed/x64-windows/lib)
+else()
+target_include_directories(${PROJECT_NAME} PUBLIC ~/lib/vcpkg/installed/x64-linux/include)
+target_link_libraries(${PROJECT_NAME} PUBLIC ~/lib/vcpkg/installed/x64-linux/lib)
+endif()
+# target_link_libraries(helloworld PUBLIC Crow::Crow)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin)
+set_target_properties(${PROJECT_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin/$<0:>)
+set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME ${PROJECT_NAME})
+set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX _V${CMAKE_PROJECT_VERSION}_${Configuration}.exe)

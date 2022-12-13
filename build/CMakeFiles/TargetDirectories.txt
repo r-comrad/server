@@ -1,0 +1,3 @@
+D:/projects/VSCode/server/build/CMakeFiles/crow_examples.dir
+D:/projects/VSCode/server/build/CMakeFiles/ALL_BUILD.dir
+D:/projects/VSCode/server/build/CMakeFiles/ZERO_CHECK.dir
