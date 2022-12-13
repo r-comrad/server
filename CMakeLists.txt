@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.15)
-project(KusManager VERSION 1.2)
+project(Server VERSION 1.2)
 
 add_executable(${PROJECT_NAME} source/main.cpp)
 
