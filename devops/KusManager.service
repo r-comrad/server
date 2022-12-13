@@ -6,10 +6,15 @@ After=syslog.target network-online.target
 
 [Service]
 Type=simple
-ExecStart=~/server/bin/Server.exe
+ExecStart=/home/rcomrad/server/bin/Server.exe
 Restart=on-failure
 RestartSec=10
 KillMode=process
 
 [Install]
 WantedBy=multi-user.target
+
+# /etc/systemd/system/
+# sudo systemctl start KusManager
+# sudo systemctl stop KusManager
+# sudo systemctl daemon-reload
