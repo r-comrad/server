@@ -8,7 +8,7 @@ target_include_directories(${PROJECT_NAME} PUBLIC D:/lib/vcpkg/installed/x64-win
 target_link_libraries(${PROJECT_NAME} PUBLIC D:/lib/vcpkg/installed/x64-windows/lib)
 else()
 target_include_directories(${PROJECT_NAME} PUBLIC ~/lib/vcpkg/installed/x64-linux/include)
-target_link_libraries(${PROJECT_NAME} PUBLIC "~/lib/vcpkg/installed/x64-linux/lib")
+target_link_libraries(${PROJECT_NAME} PUBLIC "/home/rcomrad/lib/vcpkg/installed/x64-linux/lib")
 endif()
 # target_link_libraries(helloworld PUBLIC Crow::Crow)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin)
