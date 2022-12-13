@@ -4,8 +4,7 @@ git stash
 git pull
 
 cd devops
-pwd
-ls
+chmod +x ./build.sh
 ./build.sh
 
 cd ../bin
