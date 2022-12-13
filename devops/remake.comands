@@ -3,6 +3,14 @@ pwd
 git stash
 git pull
 
+cd ..
+mkdir build
+cd build/
+cmake ..
+make
+cd ..
+rm -rf build
+
 cd devops
 ./build.sh
 
