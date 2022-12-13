@@ -9,3 +9,4 @@ chmod +x ./build.sh
 
 cd ../bin
 sudo -S ./Server.exe 111
+

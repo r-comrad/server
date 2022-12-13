@@ -1,12 +1,12 @@
 [Unit]
-Description=My revolutionary Crow application
+Description=KusManager
 
 Wants=network.target
 After=syslog.target network-online.target
 
 [Service]
 Type=simple
-ExecStart=/absolute/path/to/your/executable
+ExecStart=~/server/bin/Server.exe
 Restart=on-failure
 RestartSec=10
 KillMode=process
