@@ -1,5 +1,6 @@
 #!/bin/bash
 #chmod +x ./cmake-install.sh
+#https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 
 git clone https://github.com/openssl/openssl
 
