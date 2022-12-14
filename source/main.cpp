@@ -94,6 +94,40 @@ main()
             return res;
         });
 
+    CROW_ROUTE(app, "/mark/<int>")
+    (
+        [](int num)
+        {
+            if (num != 1) num = 1;
+
+            crow::json::wvalue mark1;
+            mark1["id"]      = 1;
+            mark1["student"] = 1;
+            mark1["lesson"]  = 1;
+            mark1["value"]   = "2.3";
+
+            crow::json::wvalue mark2;
+            mark2["id"]      = 2;
+            mark2["student"] = 2;
+            mark2["lesson"]  = 2;
+            mark2["value"]   = "4";
+
+            crow::json::wvalue res;
+            res["marks"] = crow::json::wvalue::list({mark1, mark2});
+            return res;
+        });
+
+    CROW_ROUTE(app, "/mark/single/<int>/<int>")
+    (
+        [](int aStudentId, int aLessonId)
+        {
+            crow::json::wvalue mark;
+            mark["id"]      = 1;
+            mark["student"] = 1;
+            mark["lesson"]  = 1;
+            mark["value"]   = "2.3";
+            return mark;
+        });
     //-----
 
     /*
