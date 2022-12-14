@@ -1,6 +1,6 @@
 
 #define CROW_STATIC_DIRECTORY "../resourse/"
-#define CROW_STATIC_ENDPOINT "/sus/<path>"
+#define CROW_STATIC_ENDPOINT  "/sus/<path>"
 
 #include "crow.h"
 
