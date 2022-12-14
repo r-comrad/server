@@ -2,6 +2,8 @@
 #define CROW_STATIC_DIRECTORY "resourse/"
 #define CROW_STATIC_ENDPOINT  "/sus/<path>"
 
+#include "crow/middlewares/cors.h"
+
 #include "crow.h"
 
 class ExampleLogHandler : public crow::ILogHandler
@@ -46,9 +48,21 @@ struct ExampleMiddleware
 int
 main()
 {
-    crow::App<ExampleMiddleware> app;
+    // Enable CORS
+    crow::App<crow::CORSHandler> app;
 
-    app.get_middleware<ExampleMiddleware>().setMessage("hello");
+    // Customize CORS
+    auto& cors = app.get_middleware<crow::CORSHandler>();
+
+    // clang-format off
+    cors
+      .global()
+        .headers("X-Custom-Header", "Upgrade-Insecure-Requests")
+        .methods("POST"_method, "GET"_method)
+      .prefix("/cors")
+        .origin("example.com")
+      .prefix("/nocors")
+        .ignore();
 
     // CROW_ROUTE(app, "/test23")
     // (
