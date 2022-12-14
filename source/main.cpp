@@ -28,7 +28,7 @@ main()
     CROW_ROUTE(app, "/sas")
     ([](const crow::request&, crow::response& res) {
         //replace cat.jpg with your file path
-        res.set_static_file_info("D:/projects/VSCode/server/bin/resourse/1.jpg");
+        res.set_static_file_info("resourse/1.jpg");
         res.end();
     });
 
