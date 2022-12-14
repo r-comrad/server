@@ -1,3 +1,11 @@
+
+#if defined(WIND)
+#    define CROW_STATIC_DIRECTORY "D:/projects/VSCode/server/resourse/"
+#    elif defined(LINX)
+#    define CROW_STATIC_DIRECTORY "~/server/resourse/"
+#endif
+#define CROW_STATIC_ENDPOINT "/sus/<path>"
+
 #include "crow.h"
 
 class ExampleLogHandler : public crow::ILogHandler

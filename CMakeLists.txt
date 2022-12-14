@@ -3,13 +3,17 @@ project(Server VERSION 1.2)
 
 add_executable(${PROJECT_NAME} source/main.cpp)
 
+set(CROW_FEATURES ssl)
+
 if (MSVC_VERSION GREATER_EQUAL "1900")
 target_include_directories(${PROJECT_NAME} PUBLIC D:/lib/vcpkg/installed/x64-windows/include)
 target_link_libraries(${PROJECT_NAME} PUBLIC D:/lib/vcpkg/installed/x64-windows/lib)
+target_compile_definitions(${PROJECT_NAME} PRIVATE WIND)
 else()
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread -Wl,--no-as-needed -ldl")
 target_include_directories(${PROJECT_NAME} PUBLIC ~/lib/vcpkg/installed/x64-linux/include)
 target_link_libraries(${PROJECT_NAME} PUBLIC "/home/rcomrad/lib/vcpkg/installed/x64-linux/lib")
+target_compile_definitions(${PROJECT_NAME} PRIVATE LINX)
 endif()
 # target_link_libraries(helloworld PUBLIC Crow::Crow)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin)
