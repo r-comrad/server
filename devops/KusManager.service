@@ -18,5 +18,7 @@ WantedBy=multi-user.target
 # sudo systemctl start KusManager
 # sudo systemctl restart KusManager
 # sudo systemctl stop KusManager
-# sudo systemctl daemon-reload
 # sudo systemctl status KusManager
+# sudo systemctl daemon-reload
+
+# sudo chmod 640 /etc/systemd/system/crowthing.service
