@@ -48,9 +48,9 @@ main()
 
     CROW_ROUTE(app, "/grade/<int>")
     (
-        [](int count)
+        [](int num)
         {
-            if (count != 1) count = 1;
+            if (num != 1) num = 1;
 
             crow::json::wvalue student1;
             student1["id"]      = 1;
@@ -63,11 +63,33 @@ main()
             student2["surname"] = "SUS_MEGASURNAME";
 
             crow::json::wvalue res;
-            res["id"]       = count;
+            res["id"]       = num;
             res["name"]     = "SUS_CLASS";
             res["students"] = crow::json::wvalue::list({student1, student2});
-            //crow::json::wvalue::list::
-            res["students"];
+
+            return res;
+        });
+
+    CROW_ROUTE(app, "/plan/<int>")
+    (
+        [](int num)
+        {
+            if (num != 1) num = 1;
+
+            crow::json::wvalue lessons1;
+            lessons1["id"]   = 1;
+            lessons1["name"] = "Revolution.101";
+            lessons1["date"] = "01-10-1917";
+
+            crow::json::wvalue lessons2;
+            lessons2["id"]   = 2;
+            lessons2["name"] = "Why we IVAN?";
+            lessons2["date"] = "02-10-1917";
+
+            crow::json::wvalue res;
+            res["id"]      = 1;
+            res["name"]    = "Why tcar suck";
+            res["lessons"] = crow::json::wvalue::list({lessons1, lessons2});
 
             return res;
         });
