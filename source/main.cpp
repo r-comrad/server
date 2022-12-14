@@ -1,6 +1,10 @@
 
-#define CROW_STATIC_DIRECTORY "resourse/"
-#define CROW_STATIC_ENDPOINT  "/sus/<path>"
+#ifdef LINX
+#    define CROW_STATIC_DIRECTORY "resourse/"
+#elif defined(WIND)
+#    define CROW_STATIC_DIRECTORY "../working_directory/resourse/"
+#endif
+#define CROW_STATIC_ENDPOINT "/sus/<path>"
 
 #include "crow/middlewares/cors.h"
 
