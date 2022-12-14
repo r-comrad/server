@@ -1,9 +1,11 @@
 
-#if defined(WIND)
-#    define CROW_STATIC_DIRECTORY "D:/projects/VSCode/server/resourse/"
-#    elif defined(LINX)
+#if defined(LINX)
 #    define CROW_STATIC_DIRECTORY "~/server/resourse/"
+#elif defined(WIND)
+#    define CROW_STATIC_DIRECTORY "D:/projects/VSCode/server/resourse/"
+
 #endif
+
 #define CROW_STATIC_ENDPOINT "/sus/<path>"
 
 #include "crow.h"
