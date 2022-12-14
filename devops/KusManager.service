@@ -7,6 +7,8 @@ After=syslog.target network-online.target
 [Service]
 Type=simple
 ExecStart=/home/rcomrad/server/bin/Server.exe
+StandardOutput=/home/rcomrad/server/log1.log
+StandardError=/home/rcomrad/server/log2.log
 Restart=on-failure
 RestartSec=10
 KillMode=process
