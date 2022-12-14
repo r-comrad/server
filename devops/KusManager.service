@@ -25,3 +25,7 @@ WantedBy=multi-user.target
 # sudo systemctl daemon-reload
 
 # sudo chmod 640 /etc/systemd/system/crowthing.service
+
+# sudo journalctl -u KusManager
+
+# scp rcomrad@194.87.206.68:/home/rcomrad/logs D:/logs
