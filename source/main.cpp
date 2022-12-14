@@ -1,5 +1,5 @@
 
-#define CROW_STATIC_DIRECTORY "../resourse/"
+#define CROW_STATIC_DIRECTORY "resourse/"
 #define CROW_STATIC_ENDPOINT  "/sus/<path>"
 
 #include "crow.h"
@@ -49,6 +49,16 @@ main()
     crow::App<ExampleMiddleware> app;
 
     app.get_middleware<ExampleMiddleware>().setMessage("hello");
+
+    // CROW_ROUTE(app, "/test23")
+    // (
+    //     []()
+    //     {
+    //         crow::response res;
+    //         res.set_static_file_info("../resourse/1.gif");
+    //         res.
+    //         return res;
+    //     });
 
     CROW_ROUTE(app, "/grade/<int>")
     (
