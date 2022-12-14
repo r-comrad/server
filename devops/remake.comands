@@ -1,4 +1,4 @@
-sudo -S systemctl stop KusManager 111
+sudo -S systemctl stop KusManager 
 
 cd server
 pwd
@@ -10,6 +10,6 @@ chmod +x ./build.sh
 ./build.sh
 
 cd ../bin
-sudo -S ./Server.exe 111
+#sudo -S ./Server.exe 111
 
 sudo -S systemctl start KusManager 111
