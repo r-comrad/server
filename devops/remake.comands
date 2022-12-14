@@ -6,10 +6,11 @@ git stash
 git pull
 
 cd devops
+chmod +x ./make_servis.sh
+./make_servis.sh
 chmod +x ./build.sh
 ./build.sh
 
 cd ../bin
-#sudo -S ./Server.exe 111
 
 echo -e "111\n" | sudo -S systemctl start KusManager
