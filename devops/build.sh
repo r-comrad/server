@@ -1,5 +1,5 @@
 cd ..
-rm -rf bin
+#rm -rf bin
 mkdir build
 cd build/
 cmake ..
