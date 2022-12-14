@@ -1,3 +1,5 @@
+sudo systemctl stop KusManager
+
 cd server
 pwd
 git stash
@@ -10,3 +12,4 @@ chmod +x ./build.sh
 cd ../bin
 sudo -S ./Server.exe 111
 
+sudo systemctl start KusManager
