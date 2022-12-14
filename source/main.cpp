@@ -1,6 +1,6 @@
 
 #if defined(LINX)
-#    define CROW_STATIC_DIRECTORY "~/server/resourse/"
+#    define CROW_STATIC_DIRECTORY "/home/rcomrad/server/resourse"
 #elif defined(WIND)
 #    define CROW_STATIC_DIRECTORY "D:/projects/VSCode/server/resourse/"
 
