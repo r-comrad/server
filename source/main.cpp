@@ -58,14 +58,16 @@ main()
             student1["surname"] = "SUS_SURNAME";
 
             crow::json::wvalue student2;
-            student1["id"]      = 2;
-            student1["name"]    = "SUS_MEGANAME";
-            student1["surname"] = "SUS_MEGASURNAME";
+            student2["id"]      = 2;
+            student2["name"]    = "SUS_MEGANAME";
+            student2["surname"] = "SUS_MEGASURNAME";
 
             crow::json::wvalue res;
             res["id"]       = count;
             res["name"]     = "SUS_CLASS";
             res["students"] = crow::json::wvalue::list({student1, student2});
+            //crow::json::wvalue::list::
+            res["students"];
 
             return res;
         });
