@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.15)
 project(Server VERSION 1.2)
 
-add_executable(${PROJECT_NAME} source/main.cpp)
+add_executable(${PROJECT_NAME} source/main.cpp source/domain/path.cpp  source/domain/path.hpp)
 
 set(CROW_FEATURES ssl)
 

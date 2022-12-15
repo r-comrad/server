@@ -3,6 +3,8 @@
 
 #define CROW_STATIC_ENDPOINT "/sus/<path>"
 
+#include "domain/path.hpp"
+
 #include "crow/middlewares/cors.h"
 
 #include "crow.h"
@@ -31,6 +33,11 @@ main()
         //replace cat.jpg with your file path
         res.set_static_file_info("resourse/1.jpg");
         res.end();
+    });
+
+        CROW_ROUTE(app, "/pwd")
+    ([]() {
+        return dom::Path::getExecutablePath();
     });
 
     CROW_ROUTE(app, "/grade/<int>")
