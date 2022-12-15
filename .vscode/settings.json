@@ -76,6 +76,7 @@
         "xstddef": "cpp",
         "xtr1common": "cpp",
         "filesystem": "cpp",
-        "bitset": "cpp"
+        "bitset": "cpp",
+        "strstream": "cpp"
     }
 }

@@ -54,8 +54,7 @@ dom::Path::getExecutablePathOnce() noexcept
     return std::string(buffer);
 #elif defined(LINX)
     char buf[PATH_MAX + 1];
-    if (readlink("/proc/self/exe", buf, sizeof(buf) - 1) == -1)
-        WRITE_ERROR("readlink() failed");
+    if (readlink("/proc/self/exe", buf, sizeof(buf) - 1) == -1);
     std::string str(buf);
     int i = str.size() - 1;
     for (int j = 0; j < 1; --i)
