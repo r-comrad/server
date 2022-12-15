@@ -1,5 +1,5 @@
 
-#define CROW_STATIC_DIRECTORY "resourse/"
+#define CROW_STATIC_DIRECTORY "/home/rcomrad/server/bin/resourse/"
 #define CROW_STATIC_ENDPOINT  "/sus/<path>"
 #include "domain/path.hpp"
 
