@@ -1,8 +1,8 @@
 
 #if defined(LINX)
-#    define CROW_STATIC_DIRECTORY "/home/rcomrad/server/bin/working_directory/resourse/"
+#    define CROW_STATIC_DIRECTORY "/home/rcomrad/server/bin/resourse/"
 #elif defined(WIND)
-#    define CROW_STATIC_DIRECTORY "../working_directory/resourse/"
+#    define CROW_STATIC_DIRECTORY "resourse/"
 #endif
 #define CROW_STATIC_ENDPOINT "/sus/<path>"
 #include "domain/path.hpp"
