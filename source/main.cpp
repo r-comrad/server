@@ -1,6 +1,10 @@
 
-#define CROW_STATIC_DIRECTORY "/home/rcomrad/server/bin/resourse/"
-#define CROW_STATIC_ENDPOINT  "/sus/<path>"
+#if defined(LINX)
+#    define CROW_STATIC_DIRECTORY "/home/rcomrad/server/bin/working_directory/resourse/"
+#elif defined(WIND)
+#    define CROW_STATIC_DIRECTORY "../working_directory/resourse/"
+#endif
+#define CROW_STATIC_ENDPOINT "/sus/<path>"
 #include "domain/path.hpp"
 
 #include "crow/middlewares/cors.h"
