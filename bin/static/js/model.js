@@ -1,4 +1,5 @@
 import { TitleBlock, ColumsBlock, ImageBlock } from '/static/classes/blocks.js'
+import { ThemeButton } from '/static/classes/buttons.js'
 
 export const model = [
     new TitleBlock('Журнал',
@@ -19,6 +20,7 @@ export const model = [
 ]
 
 export const ButtonModel = [
+
 ]
 
 const text = `

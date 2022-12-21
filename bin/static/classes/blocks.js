@@ -9,6 +9,9 @@ class Block {
     toHTML() {
         throw new Error('ERROR NO method realization')
     }
+
+    addListener(document) {
+    }
 }
 
 export class TitleBlock extends Block {

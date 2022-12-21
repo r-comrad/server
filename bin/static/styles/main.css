@@ -4,6 +4,8 @@
     --black: #000000;
     --red: #ff0000;
     --dark: rgba(23, 23, 23, 1);
+    --sun: url('/static/resources/sun.png');
+    --moon: url('/static/resources/moon.png');
 }
 
 body {
@@ -33,10 +35,12 @@ ul {
     background-color: var(--btnBg);
 }
 
-.btn {
+.ThemeButton {
     position: absolute;
-    top: 20px;
-    left: 250px;
+    background: var(--themeBtnImg);
+    background-size: cover;
+    top: 25px;
+    left: 25px;
     height: 50px;
     width: 50px;
     border-radius: 50%;
@@ -47,13 +51,17 @@ ul {
 .light-theme {
     --bg: var(--blue);
     --fontColor: var(--black);
-    --btnBg: var(--black);
+    --btnBg: var(--dark);
     --btnFontColor: var(--white);
+
+    --themeBtnImg: var(--sun)
 }
 
 .dark-theme {
     --bg: var(--dark);
     --fontColor: var(--white);
-    --btnBg: var(--white);
+    --btnBg: var(--blue);
     --btnFontColor: var(--dark);
+
+    --themeBtnImg: var(--moon)
 }

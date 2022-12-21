@@ -11,9 +11,14 @@ export function div(content) {
     return `<div>${content}</div>`
 }
 
-export function button(name, content) {
-    return `<button class="btn" class=${name}>${content}</button>`
+export function button(name, content = "") {
+    return `<button class="${name}">${content}</button>`
 }
+
+export function themeButton(name, content) {
+    return button(name, `<img src="${content}"/>`)
+}
+
 
 function css(styles = {}) {
     // const keys = Object.keys(styles)
