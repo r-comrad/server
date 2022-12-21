@@ -49,7 +49,7 @@ main()
 
     CROW_ROUTE(app, "/")
     ([]() {
-        return crow::mustache::load("authentication.html").render();
+        return crow::mustache::load("core.html").render();
     });
 
     CROW_ROUTE(app, "/grade/<int>")
