@@ -1,4 +1,4 @@
-import { Site } from './site.js'
+import { Site } from '/static/classes/site.js'
 import { ThemeButton } from './buttons.js'
 
 export class Core {
