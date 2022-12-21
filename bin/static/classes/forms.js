@@ -22,12 +22,31 @@ export class Form extends Block {
 
     addListener() {
         const auntif = document.querySelector('.auntification');
+        auntif.action = 'static/resources/1.gif';
+        form.method = 'GET';
+
         // console.log(auntif)
         auntif.addEventListener('submit', this.listener)
     }
 
     listener(event) {
+        //const auntif = document.querySelector('.auntification');
         event.preventDefault()
         console.log('rarr')
+        console.log(event.target)
+        console.log(event.target.submit)
+        console.log(event.target.login.value)
+        console.log(event.target.password.value)
+
+        // var mytext = document.getElementById("mytext").value;
+        // localStorage.setItem("login", event.target.login.value);
+        // localStorage.setItem("password", event.target.password.value);
+        // return true;
+
+        // const XHR = new XMLHttpRequest();
+        // XHR.open('GET', 'static/resources/1.gif');
+        // XHR.send();
+
+        document.querySelector('.auntification').submit();
     }
 }

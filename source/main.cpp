@@ -42,6 +42,11 @@ main()
         return dom::Path::getExecutablePath();
     });
 
+    CROW_ROUTE(app, "/auntificationChecker")
+    ([]() {
+        return dom::Path::getExecutablePath();
+    });
+
     CROW_ROUTE(app, "/html")
     ([]() {
         return crow::mustache::load("site.html").render();
