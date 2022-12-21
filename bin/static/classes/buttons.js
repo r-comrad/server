@@ -5,13 +5,13 @@ const light = 'light-theme'
 
 export class ThemeButton {
     constructor() {
-        this.$el = document.querySelector('#theme')
-        this.init()
-    }
+        this.$el = document.querySelector('#ThemeButton')
 
-    init() {
         this.$el.insertAdjacentHTML('afterbegin', this.toHTML())
-        this.$el.addEventListener('click', this.addListener.bind(this))
+        console.log(this.$el)
+
+        const theme = document.querySelector('#theme')
+        this.$el.addEventListener('click', this.addListener.bind(theme))
     }
 
     toHTML() {
@@ -23,8 +23,8 @@ export class ThemeButton {
     }
 
     addListener() {
-        this.$el.classList.toggle('light-theme');
-        this.$el.classList.toggle('dark-theme');
+        this.classList.toggle('light-theme');
+        this.classList.toggle('dark-theme');
 
         // console.log(this.$el.firstChild.firstChild);
         // this.$el.firstChild.firstChild.nodeValue = this.setName(this.$el.className)

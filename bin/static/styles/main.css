@@ -35,6 +35,16 @@ ul {
     background-color: var(--btnBg);
 }
 
+.login {
+    /* position: absolute;
+    top: 250px;
+    left: 25px; */
+    position: absolute;
+    top: 25%;
+    left: 42%;
+}
+
+
 .ThemeButton {
     position: absolute;
     background: var(--themeBtnImg);
@@ -46,6 +56,15 @@ ul {
     border-radius: 50%;
     color: var(--btnFontColor);
     background-color: var(--btnBg);
+}
+
+.theme {
+    --bg: var(--blue);
+    --fontColor: var(--black);
+    --btnBg: var(--dark);
+    --btnFontColor: var(--white);
+
+    --themeBtnImg: var(--sun)
 }
 
 .light-theme {
