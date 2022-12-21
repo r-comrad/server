@@ -11,6 +11,10 @@ export function div(type = "", content) {
     return `<div class="${type}">${content}</div>`
 }
 
+export function form(type = "", content) {
+    return `<form class="${type}">${content}</form>`
+}
+
 export function button(name, content = "") {
     return `<button class="${name}">${content}</button>`
 }

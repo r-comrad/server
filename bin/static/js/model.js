@@ -28,7 +28,7 @@ export const AuntificationModel = [
     new ThemeButton(),
     new Form([
         { type: 'login', text: 'Логин' },
-        { type: 'passeowd', text: 'Пароль' }
+        { type: 'password', text: 'Пароль' }
     ])
 ]
 
