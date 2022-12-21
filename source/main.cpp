@@ -1,10 +1,10 @@
 
-#if defined(LINX)
-#    define CROW_STATIC_DIRECTORY "/home/rcomrad/server/bin/resourse/"
-#elif defined(WIND)
-#    define CROW_STATIC_DIRECTORY "resourse/"
-#endif
-#define CROW_STATIC_ENDPOINT "/sus/<path>"
+// #if defined(LINX)
+// #    define CROW_STATIC_DIRECTORY "/home/rcomrad/server/bin/resourse/"
+// #elif defined(WIND)
+// #    define CROW_STATIC_DIRECTORY "resourse/"
+// #endif
+// #define CROW_STATIC_ENDPOINT "/sus/<path>"
 #include "domain/path.hpp"
 
 #include "crow/middlewares/cors.h"
@@ -33,13 +33,23 @@ main()
     CROW_ROUTE(app, "/sas")
     ([](const crow::request&, crow::response& res) {
         //replace cat.jpg with your file path
-        res.set_static_file_info("resourse/1.jpg");
+        res.set_static_file_info("1.jpg");
         res.end();
     });
 
-        CROW_ROUTE(app, "/pwd")
+    CROW_ROUTE(app, "/pwd")
     ([]() {
         return dom::Path::getExecutablePath();
+    });
+
+    CROW_ROUTE(app, "/html")
+    ([]() {
+        return crow::mustache::load("site.html").render();
+    });
+
+    CROW_ROUTE(app, "/")
+    ([]() {
+        return crow::mustache::load("authentication.html").render();
     });
 
     CROW_ROUTE(app, "/grade/<int>")
