@@ -9,7 +9,7 @@ cd devops
 pwd
 ls
 chmod +x ./make_servis.sh
-./make_servis.sh
+sudo ./make_servis.sh
 chmod +x ./build.sh
 ./build.sh
 
