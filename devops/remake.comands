@@ -7,7 +7,7 @@ git pull
 
 cd devops
 chmod +x ./make_servis.sh
-sudo ./make_servis.sh
+echo -e "111\n" | sudo ./make_servis.sh
 chmod +x ./build.sh
 ./build.sh
 
