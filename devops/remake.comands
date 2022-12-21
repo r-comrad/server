@@ -6,6 +6,8 @@ git stash
 git pull
 
 cd devops
+pwd
+ls
 chmod +x ./make_servis.sh
 ./make_servis.sh
 chmod +x ./build.sh
