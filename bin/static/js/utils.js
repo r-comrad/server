@@ -7,17 +7,19 @@ export function col(content) {
     return `<div class="col-sm">${content}</div>`
 }
 
-export function div(content) {
-    return `<div>${content}</div>`
+export function div(type = "", content) {
+    return `<div class="${type}">${content}</div>`
 }
 
 export function button(name, content = "") {
     return `<button class="${name}">${content}</button>`
 }
 
-export function themeButton(name, content) {
-    return button(name, `<img src="${content}"/>`)
+export function themeButton(name, content = "") {
+    return `<div id="ThemeButton">${button(name, content)}</div>`
 }
+
+
 
 
 function css(styles = {}) {

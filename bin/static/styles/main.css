@@ -35,7 +35,7 @@ ul {
     background-color: var(--btnBg);
 }
 
-.login {
+.auntification {
     /* position: absolute;
     top: 250px;
     left: 25px; */
@@ -58,7 +58,7 @@ ul {
     background-color: var(--btnBg);
 }
 
-.theme {
+.site {
     --bg: var(--blue);
     --fontColor: var(--black);
     --btnBg: var(--dark);

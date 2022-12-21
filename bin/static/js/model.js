@@ -1,5 +1,6 @@
 import { TitleBlock, ColumsBlock, ImageBlock } from '/static/classes/blocks.js'
 import { ThemeButton } from '/static/classes/buttons.js'
+import { Form } from '/static/classes/forms.js'
 
 export const model = [
     new TitleBlock('Журнал',
@@ -23,9 +24,23 @@ export const ButtonModel = [
 
 ]
 
-const text = `
-Крутые видео и уроки по JavaScript тут: <a href="https://youtube.com/c/VladilenMinin" target="_blank">Владилен Минин</a>. Тут ты найдешь исчерпывающую информацию по любым аспектам языка, любым фреймворкам, такие как: React, Vue, Angular, Node, Svelte, Express, Next, Nuxt и многое другое. Присоединяйся!
-`
+export const AuntificationModel = [
+    new ThemeButton(),
+    new Form([
+        { type: 'login', text: 'Логин' },
+        { type: 'passeowd', text: 'Пароль' }
+    ])
+]
+
+// export const AuntificationModel = [
+//     new Form({
+//         tag: 'auntification',
+//         value:[
+//             { type: 'login', text: 'Логин' },
+//             { type: 'passeowd', text: 'Пароль' }
+//         ]
+//     })
+// ]
 
 // export const model = [
 //     new TitleBlock('Конструктор сайтов на чистом JavaScript', {

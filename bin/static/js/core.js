@@ -1,4 +1,4 @@
 import { Core } from '/static/classes/core.js'
-import { ButtonModel } from './model.js'
+import { ButtonModel, AuntificationModel } from './model.js'
 
-new Core(ButtonModel).init()
+new Core(AuntificationModel).init()

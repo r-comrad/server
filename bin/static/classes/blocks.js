@@ -1,6 +1,6 @@
 import { row, col } from '/static/js/utils.js'
 
-class Block {
+export class Block {
     constructor(value, options) {
         this.value = value
         this.options = options
@@ -10,7 +10,7 @@ class Block {
         throw new Error('ERROR NO method realization')
     }
 
-    addListener(document) {
+    addListener() {
     }
 }
 
