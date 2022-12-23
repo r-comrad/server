@@ -73,6 +73,14 @@ main()
             student2["name"]    = "SUS_MEGANAME";
             student2["surname"] = "SUS_MEGASURNAME";
 
+
+            crow::json::wvalue student3;
+            student2["id"]      = 3;
+            student2["name"]    = "Zahrebelhaya";
+            student2["surname"] = "22";
+
+
+
             crow::json::wvalue res;
             res["id"]       = num;
             res["name"]     = "SUS_CLASS";
