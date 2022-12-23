@@ -95,6 +95,10 @@ main()
         {
             if (num != 1) num = 1;
 
+            crow::json::wvalue res;
+            res["id"]      = 1;
+            res["name"]    = "Why tcar suck";
+
             crow::json::wvalue lessons1;
             lessons1["id"]   = 1;
             lessons1["name"] = "Revolution.101";
@@ -105,40 +109,32 @@ main()
             lessons2["name"] = "Why we IVAN?";
             lessons2["date"] = "02-10-1917";
 
-            crow::json::wvalue res;
-            res["id"]      = 1;
-            res["name"]    = "Why tcar suck";
-
             crow::json::wvalue lessons3;
-            lessons2["id"]   = 3;
-            lessons2["name"] = "Why we suck?";
-            lessons2["date"] = "02-11-1917";
+            lessons3["id"]   = 3;
+            lessons3["name"] = "Why we suck?";
+            lessons3["date"] = "02-11-1917";
 
             crow::json::wvalue lessons4;
-            lessons2["id"]   = 4;
-            lessons2["name"] = "Why we fuck?";
-            lessons2["date"] = "02-12-1917";
-
+            lessons4["id"]   = 4;
+            lessons4["name"] = "Why we fuck?";
+            lessons4["date"] = "02-12-1917";
             
             crow::json::wvalue lessons5;
-            lessons2["id"]   = 5;
-            lessons2["name"] = "Why we love ITMO University?";
-            lessons2["date"] = "12-01-1918";
+            lessons5["id"]   = 5;
+            lessons5["name"] = "Why we love ITMO University?";
+            lessons5["date"] = "12-01-1918";
 
             crow::json::wvalue lessons6;
-            lessons2["id"]   = 6;
-            lessons2["name"] = "Kurs Zahrebelnoy";
-            lessons2["date"] = "17-01-1918";
+            lessons6["id"]   = 6;
+            lessons6["name"] = "Kurs Zahrebelnoy";
+            lessons6["date"] = "17-01-1918";
 
             crow::json::wvalue lessons7;
-            lessons2["id"]   = 7;
-            lessons2["name"] = "USSR 3.0";
-            lessons2["date"] = "27-01-1918";
+            lessons7["id"]   = 7;
+            lessons7["name"] = "USSR 3.0";
+            lessons7["date"] = "27-01-1918";
 
-            res["lessons"] = crow::json::wvalue::list({lessons1, lessons2,
-            
-            lessons3, lessons4, lessons5, lessons6, lessons7
-            });
+            res["lessons"] = crow::json::wvalue::list({lessons1, lessons2, lessons3, lessons4, lessons5, lessons6, lessons7});
 
             return res;
         });
