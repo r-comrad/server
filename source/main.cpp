@@ -75,29 +75,29 @@ main()
 
 
             crow::json::wvalue student3;
-            student2["id"]      = 3;
-            student2["name"]    = "Zahrebelhaya";
-            student2["surname"] = "22";
+            student3["id"]      = 3;
+            student3["name"]    = "Zahrebelhaya";
+            student3["surname"] = "22";
 
-            crow::json::wvalue student3;
-            student2["id"]      = 4;
-            student2["name"]    = "Shiz";
-            student2["surname"] = "Borisovich";
+            crow::json::wvalue student4;
+            student4["id"]      = 4;
+            student4["name"]    = "Shiz";
+            student4["surname"] = "Borisovich";
 
-            crow::json::wvalue student3;
-            student2["id"]      = 5;
-            student2["name"]    = "Putin";
-            student2["surname"] = "VVP";
+            crow::json::wvalue student5;
+            student5["id"]      = 5;
+            student5["name"]    = "Putin";
+            student5["surname"] = "VVP";
 
-            crow::json::wvalue student3;
-            student2["id"]      = 6;
-            student2["name"]    = "ITMO-Students";
-            student2["surname"] = "Passive";
+            crow::json::wvalue student6;
+            student6["id"]      = 6;
+            student6["name"]    = "ITMO-Students";
+            student6["surname"] = "Passive";
 
             crow::json::wvalue res;
             res["id"]       = num;
             res["name"]     = "SUS_CLASS";
-            res["students"] = crow::json::wvalue::list({student1, student2});
+            res["students"] = crow::json::wvalue::list({student1, student2, student3,student4 ,student5 , student6});
 
             return res;
         });
