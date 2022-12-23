@@ -79,7 +79,20 @@ main()
             student2["name"]    = "Zahrebelhaya";
             student2["surname"] = "22";
 
+            crow::json::wvalue student3;
+            student2["id"]      = 4;
+            student2["name"]    = "Shiz";
+            student2["surname"] = "Borisovich";
 
+            crow::json::wvalue student3;
+            student2["id"]      = 5;
+            student2["name"]    = "Putin";
+            student2["surname"] = "VVP";
+
+            crow::json::wvalue student3;
+            student2["id"]      = 6;
+            student2["name"]    = "ITMO-Students";
+            student2["surname"] = "Passive";
 
             crow::json::wvalue res;
             res["id"]       = num;
