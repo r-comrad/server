@@ -174,17 +174,37 @@ main()
             return res;
         });
 
-    CROW_ROUTE(app, "/mark/single/<int>/<int>")
+    CROW_ROUTE(app, "/subjects")
     (
-        [](int aStudentId, int aLessonId)
-        {
-            crow::json::wvalue mark;
-            mark["id"]      = 1;
-            mark["student"] = 1;
-            mark["lesson"]  = 1;
-            mark["value"]   = "2.3";
-            return mark;
-        });
+    [](int aStudentId, int aLessonId)
+    {
+        crow::json::wvalue subject1;
+        subject1["id"]  = 1;
+        subject1["name"]    = 1;
+        subject1["plan"]  = 1;
+        subject1["grade"]   = 1;
+
+        crow::json::wvalue res;
+        res["subjects"] = crow::json::wvalue::list({subject1});
+        return res;
+    });
+
+
+    CROW_ROUTE(app, "/login")
+    (
+    [](int aStudentId, int aLessonId)
+    {
+        crow::json::wvalue subject1;
+        subject1["id"]  = 1;
+        subject1["name"]    = 1;
+        subject1["plan"]  = 1;
+        subject1["grade"]   = 1;
+
+        crow::json::wvalue res;
+        res["subjects"] = crow::json::wvalue::list({subject1});
+        return res;
+    });
+
 
     app.port(80).multithreaded().run();
 }
