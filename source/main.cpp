@@ -19,7 +19,7 @@ main()
 
     // Customize CORS
     auto& cors = app.get_middleware<crow::CORSHandler>();
-    app.loglevel(crow::LogLevel::Debug);
+    app.loglevel(crow::LogLevel::Error);
     // clang-format off
     cors
       .global()
