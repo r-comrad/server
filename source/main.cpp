@@ -207,6 +207,16 @@ main()
           if (!x)
               return crow::response(400);
 
+              std::cout << std::endl << std::endl;
+std::cout << "------------------------->>>>>";
+std::cout << x["login"]  << " " <<  x["password"];
+std::cout << std::endl;
+// for(auto& i : x)
+// {
+//     std::cout << i.key << " " << i.;
+// }
+std::cout << std::endl << std::endl;
+
             if (x["login"] != "sasiska" || x["password"] != "123")
                 return crow::response(400);
 
@@ -214,6 +224,10 @@ main()
         auto res = crow::response{j};
         res.add_header("Access-Control-Allow-Origin", "*");
         res.add_header("Access-Control-Allow-Headers", "Content-Type");
+
+
+
+
           return res;
       });
 

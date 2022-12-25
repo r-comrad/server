@@ -77,6 +77,19 @@
         "xtr1common": "cpp",
         "filesystem": "cpp",
         "bitset": "cpp",
-        "strstream": "cpp"
+        "strstream": "cpp",
+        "array": "cpp",
+        "codecvt": "cpp",
+        "complex": "cpp",
+        "condition_variable": "cpp",
+        "coroutine": "cpp",
+        "csignal": "cpp",
+        "cstdarg": "cpp",
+        "deque": "cpp",
+        "future": "cpp",
+        "shared_mutex": "cpp",
+        "source_location": "cpp",
+        "typeindex": "cpp",
+        "variant": "cpp"
     }
 }
