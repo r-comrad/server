@@ -207,7 +207,7 @@ main()
           if (!x)
               return crow::response(400);
 
-            if (x["login"] != "sasiska" || x["password]"] != "123")
+            if (x["login"] != "sasiska" || x["password"] != "123")
                 return crow::response(400);
 
         crow::json::wvalue res = {"OK"};
