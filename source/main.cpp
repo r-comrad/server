@@ -231,7 +231,7 @@ std::cout << std::endl << std::endl;
         crow::json::wvalue j = {"OK"};
         auto res = crow::response{j};
         res.add_header("Access-Control-Allow-Origin", "*");
-        res.add_header("Access-Control-Allow-Headers", "Content-Type");
+        res.add_header("Access-Control-Allow-Headers", "*");
 
 
 
