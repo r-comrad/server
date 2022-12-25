@@ -201,6 +201,8 @@ main()
         return res;
     });
 
+
+
        CROW_ROUTE(app, "/login")
       .methods("POST"_method)([](const crow::request& req) {
           auto x = crow::json::load(req.body);
@@ -218,7 +220,7 @@ std::cout << std::endl;
 std::cout << std::endl << std::endl;
 
             if (x["login"] != "sasiska" || x["password"] != "123")
-                return crow::response(400);
+                return crow::response(crow::json::wvalue{req.body});
 
         crow::json::wvalue j = {"OK"};
         auto res = crow::response{j};
