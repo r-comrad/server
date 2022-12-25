@@ -28,6 +28,7 @@ WantedBy=multi-user.target
 # sudo chmod 640 /etc/systemd/system/crowthing.service
 
 # sudo journalctl -u KusManager
+# sudo journalctl -u KusManager --since="2022-12-25 17:55:00"
 
 # scp rcomrad@194.87.206.68:/home/rcomrad/logs D:/logs
 

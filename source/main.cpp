@@ -210,8 +210,11 @@ main()
             if (x["login"] != "sasiska" || x["password"] != "123")
                 return crow::response(400);
 
-        crow::json::wvalue res = {"OK"};
-          return crow::response{res};
+        crow::json::wvalue j = {"OK"};
+        auto res = crow::response{j};
+        res.add_header("Access-Control-Allow-Origin", "*");
+        res.add_header("Access-Control-Allow-Headers", "Content-Type");
+          return res;
       });
 
     app.port(80).multithreaded().run();
