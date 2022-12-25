@@ -19,14 +19,14 @@ main()
 
     // Customize CORS
     auto& cors = app.get_middleware<crow::CORSHandler>();
-    app.loglevel(crow::LogLevel::Error);
+    app.loglevel(crow::LogLevel::Debug);
     // clang-format off
     cors
       .global()
-        .headers("X-Custom-Header", "Upgrade-Insecure-Requests")
+        .headers("*")
         .methods("POST"_method, "GET"_method)
       .prefix("/cors")
-        .origin("example.com")
+        .origin("*")
       .prefix("/nocors")
         .ignore();
 
