@@ -220,7 +220,13 @@ std::cout << std::endl;
 std::cout << std::endl << std::endl;
 
             if (x["login"] != "sasiska" || x["password"] != "123")
-                return crow::response(crow::json::wvalue{req.body});
+                {
+                    auto res = crow::response(crow::json::wvalue{req.body});
+                    res.add_header("Access-Control-Allow-Origin", "*");
+                    res.add_header("Access-Control-Allow-Headers", "Content-Type");
+
+                    return res;
+                }
 
         crow::json::wvalue j = {"OK"};
         auto res = crow::response{j};
